@@ -1,16 +1,14 @@
-// Finding Elements of Reference types
+// Removing Element
 
-const courses = [
-  { id: 1, name: 'John' },
-  { id: 2, name: 'William' },
-];
+const numbers = [6, 7, 8, 9, 4, 5];
 
-const course = courses.find((value) => value.name === 'William');
+console.log(numbers);
 
-console.log(course);
+const last = numbers.pop();
+console.log(last);
 
-const items = courses.findIndex((value) => {
-  return value.name === 'William';
-});
+const first = numbers.shift();
+console.log(first);
 
-console.log(items);
+const middle = numbers.splice(1, 3);
+console.log(middle);
