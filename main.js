@@ -1,10 +1,16 @@
-// Finding Primitives Types (Value Types)
+// Finding Elements of Reference types
 
-const numbers = [6, 7, 8, 9, 1];
-console.log(numbers);
+const courses = [
+  { id: 1, name: 'John' },
+  { id: 2, name: 'William' },
+];
 
-console.log(numbers.indexOf(9));
+const course = courses.find((value) => value.name === 'William');
 
-console.log(numbers.lastIndexOf(1));
+console.log(course);
 
-console.log(numbers.includes(8));
+const items = courses.findIndex((value) => {
+  return value.name === 'William';
+});
+
+console.log(items);
