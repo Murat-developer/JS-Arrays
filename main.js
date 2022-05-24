@@ -1,14 +1,11 @@
-// Combining and Slicing Arrays
+// Spread Operator
 
-const first = [{ id: 2 }];
-
+const first = [1, 2, 3];
 const second = [6, 7, 8];
 
-const combined = first.concat(second);
-first[0].id = 10;
+const combined = [...first, 'b', ...second, 'a'];
 
-const items = combined.slice(1, 3);
+const copy = [...combined];
 
 console.log(combined);
-
-console.log(items);
+console.log(copy);
