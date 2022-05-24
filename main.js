@@ -1,7 +1,13 @@
-// Iterating an Array
+// Joining Arrays
 
 const numbers = [1, 2, 3, 4];
 
-// for (let value of numbers) console.log(value);
+const joined = numbers.join(',');
+console.log(joined);
 
-numbers.forEach((index, value) => console.log(value, index));
+const message = 'This is my first message';
+const parts = message.split(' ');
+console.log(parts);
+
+const combined = parts.join('-');
+console.log(combined);
