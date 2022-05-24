@@ -1,18 +1,19 @@
-// Exercise - 4 Moving an Element
+// Exercise - 5  Count Occurrences
 
-const numbers = [1, 2, 3, 4];
+const numbers = [1, 2, 1, 3, 4];
 
-console.log(move(numbers, 1, 2));
+const count = countOccurrences(numbers, 1);
 
-function move(array, index, offset) {
-  const position = index + offset;
-  if (position >= array.length || position < 0) {
-    console.error('Invalid offset');
-    return;
-  }
+console.log(count);
 
-  const output = [...array];
-  const element = output.splice(index, 1)[0];
-  output.splice(position, 0, element);
-  return output;
+function countOccurrences(array, searchElement) {
+  //   let count = 0;
+  //   for (let element of array) if (element === searchElement) count++;
+  //   return count;
+
+  return array.reduce((accumulator, current) => {
+    const occurrence = current === searchElement ? 1 : 0;
+    console.log(accumulator, current, searchElement);
+    return accumulator + occurrence;
+  }, 0);
 }
