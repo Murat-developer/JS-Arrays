@@ -1,14 +1,14 @@
-// Emptying an Array
+// Combining and Slicing Arrays
 
-let numbers = [1, 2, 3, 4, 6, 7, 8, 9];
-let another = numbers;
+const first = [{ id: 2 }];
 
-// numbers = [];
+const second = [6, 7, 8];
 
-numbers.length = 0;
+const combined = first.concat(second);
+first[0].id = 10;
 
-// numbers.splice(0, numbers.length);
+const items = combined.slice(1, 3);
 
-console.log(numbers);
+console.log(combined);
 
-console.log(another);
+console.log(items);
