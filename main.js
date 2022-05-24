@@ -1,14 +1,14 @@
-// Removing Element
+// Emptying an Array
 
-const numbers = [6, 7, 8, 9, 4, 5];
+let numbers = [1, 2, 3, 4, 6, 7, 8, 9];
+let another = numbers;
+
+// numbers = [];
+
+numbers.length = 0;
+
+// numbers.splice(0, numbers.length);
 
 console.log(numbers);
 
-const last = numbers.pop();
-console.log(last);
-
-const first = numbers.shift();
-console.log(first);
-
-const middle = numbers.splice(1, 3);
-console.log(middle);
+console.log(another);
