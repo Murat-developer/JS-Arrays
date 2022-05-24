@@ -1,23 +1,10 @@
-// // Sorting Arrays
+// Every and Some Methods
+// every() checks to see every element
+// some() checks to see at least One element
 
-// const numbers = [6, 7, 8, 9, 0];
-// numbers.sort();
-// console.log(numbers);
+const numbers = [1, 2, -1, 3, 4];
 
-// numbers.reverse();
-// console.log(numbers);
-
-const courses = [
-  { id: 1, name: 'Node.js' },
-  { id: 2, name: 'javascript' },
-];
-
-const course = courses.sort((a, b) => {
-  const nameA = a.name.toUpperCase();
-  const nameB = b.name.toUpperCase();
-
-  if (nameA < nameB) return -1;
-  if (nameA > nameB) return 1;
-  return 0;
+const atLeastOnePositive = numbers.some((value) => {
+  return value >= 0;
 });
-console.log(course);
+console.log(atLeastOnePositive);
