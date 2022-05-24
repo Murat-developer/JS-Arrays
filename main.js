@@ -1,10 +1,7 @@
-// Every and Some Methods
-// every() checks to see every element
-// some() checks to see at least One element
+// Filter Method
 
-const numbers = [1, 2, -1, 3, 4];
+const numbers = [1, -1, 2, 3];
 
-const atLeastOnePositive = numbers.some((value) => {
+const number = numbers.filter((value) => {
   return value >= 0;
 });
-console.log(atLeastOnePositive);
