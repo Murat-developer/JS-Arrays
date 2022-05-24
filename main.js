@@ -1,13 +1,18 @@
-// Exercise - 3
+// Exercise - 4 Moving an Element
 
-const numbers = [1, 2, 3, 4, 1, 2];
+const numbers = [1, 2, 3, 4];
 
-const output = except(numbers, [1, 2]);
+console.log(move(numbers, 1, 2));
 
-console.log(output);
+function move(array, index, offset) {
+  const position = index + offset;
+  if (position >= array.length || position < 0) {
+    console.error('Invalid offset');
+    return;
+  }
 
-function except(array, excluded) {
-  const output = [];
-  for (let value of array) if (!excluded.includes(value)) output.push(value);
+  const output = [...array];
+  const element = output.splice(index, 1)[0];
+  output.splice(position, 0, element);
   return output;
 }
