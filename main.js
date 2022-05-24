@@ -1,11 +1,13 @@
-// Exercise - 2
+// Exercise - 3
 
-const numbers = [1, 2, 3, 4];
+const numbers = [1, 2, 3, 4, 1, 2];
 
-console.log(includes(numbers, 3));
+const output = except(numbers, [1, 2]);
 
-function includes(array, searchElement) {
-  for (let value of array) if (value === searchElement) return true;
+console.log(output);
 
-  return false;
+function except(array, excluded) {
+  const output = [];
+  for (let value of array) if (!excluded.includes(value)) output.push(value);
+  return output;
 }
