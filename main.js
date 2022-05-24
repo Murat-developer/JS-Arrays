@@ -1,11 +1,7 @@
-// Spread Operator
+// Iterating an Array
 
-const first = [1, 2, 3];
-const second = [6, 7, 8];
+const numbers = [1, 2, 3, 4];
 
-const combined = [...first, 'b', ...second, 'a'];
+// for (let value of numbers) console.log(value);
 
-const copy = [...combined];
-
-console.log(combined);
-console.log(copy);
+numbers.forEach((index, value) => console.log(value, index));
