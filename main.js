@@ -1,9 +1,10 @@
-// Reducing an Arrays
+// Exercise
 
-const numbers = [1, -1, 2, 3];
+const numbers = arrayFromRange(1, 5);
+console.log(numbers);
 
-const sum = numbers.reduce(
-  (accumulator, currentValue) => accumulator + currentValue,
-);
-
-console.log(sum);
+function arrayFromRange(min, max) {
+  const output = [];
+  for (let i = min; i <= max; i++) output.push(i);
+  return output;
+}
