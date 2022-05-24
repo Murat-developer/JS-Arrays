@@ -1,13 +1,23 @@
-// Joining Arrays
+// // Sorting Arrays
 
-const numbers = [1, 2, 3, 4];
+// const numbers = [6, 7, 8, 9, 0];
+// numbers.sort();
+// console.log(numbers);
 
-const joined = numbers.join(',');
-console.log(joined);
+// numbers.reverse();
+// console.log(numbers);
 
-const message = 'This is my first message';
-const parts = message.split(' ');
-console.log(parts);
+const courses = [
+  { id: 1, name: 'Node.js' },
+  { id: 2, name: 'javascript' },
+];
 
-const combined = parts.join('-');
-console.log(combined);
+const course = courses.sort((a, b) => {
+  const nameA = a.name.toUpperCase();
+  const nameB = b.name.toUpperCase();
+
+  if (nameA < nameB) return -1;
+  if (nameA > nameB) return 1;
+  return 0;
+});
+console.log(course);
